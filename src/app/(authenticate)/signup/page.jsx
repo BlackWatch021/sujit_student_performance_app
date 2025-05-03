@@ -77,7 +77,7 @@ const Signup = () => {
         </form>
         <div className="my-6">
           <div className="flex mt-4 justify-between">
-            <Button num={1} text={"Register"} />
+            <Button num={1} text={"Register"} href={"/dashboard/admin"} />
           </div>
 
           <p className={`${roboto.className} text-para mt-4`}>

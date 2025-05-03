@@ -57,8 +57,8 @@ const Login = () => {
             Login as-
           </h2>
           <div className="flex mt-4 justify-between">
-            <Button num={1} text={"Admin"} />
-            <Button num={2} text={"Student"} />
+            <Button num={1} text={"Admin"} href={"/dashboard/admin"} />
+            <Button num={2} text={"Student"} href={"/dashboard/admin"} />
           </div>
 
           <p className={`${roboto.className} text-para mt-4`}>
