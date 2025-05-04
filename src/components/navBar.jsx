@@ -13,11 +13,11 @@ import {
 import { roboto } from "@/utils/fonts";
 
 const navItems = [
-  { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { name: "Analysis", href: "/analysis", icon: Upload },
-  { name: "Students", href: "/students", icon: MonitorCheck },
-  { name: "Settings", href: "/settings", icon: ChartNoAxesCombined },
-  { name: "Settings", href: "/settings", icon: Sparkles },
+  { name: "Dashboard", href: "/dashboard/admin", icon: LayoutDashboard },
+  { name: "Data Upload", href: "/dataupload", icon: Upload },
+  { name: "Visualization", href: "/visualization", icon: ChartNoAxesCombined },
+  { name: "Analysis", href: "/analytics", icon: MonitorCheck },
+  { name: "Prediction", href: "/prediction", icon: Sparkles },
   { name: "Settings", href: "/settings", icon: Settings },
   //   { name: "Settings", href: "/settings", icon: LogOut },
 ];
@@ -25,7 +25,7 @@ const navItems = [
 const NavBar = () => {
   const pathname = usePathname();
   return (
-    <aside className="h-screen w-28 border-black border-r-1  text-white flex flex-col py-6 px-4 sticky top-0">
+    <aside className="h-screen w-30 border-black border-r-1  text-white flex flex-col py-6 px-4 sticky top-0">
       <nav className="flex flex-col gap-2 h-full justify-between">
         <div className="flex flex-col gap-2">
           {navItems.map(({ name, href, icon: Icon }, index) => {

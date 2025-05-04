@@ -1,36 +1,46 @@
 "use client";
-import AdminCards from "@/components/adminCards";
 import BarChartProject from "@/components/barChart";
-
 import LineChartProject from "@/components/lineChart";
 import DataTable from "@/components/table";
-import { departmentDataAdmin, performanceDataAdmin } from "@/utils/chartData";
+import {
+  departmentDataAdmin,
+  performanceDataAdmin,
+  studentSubjectGradesBarData,
+} from "@/utils/chartData";
 import { poppins, roboto } from "@/utils/fonts";
-import { stressTableColumns, stressTableData } from "@/utils/tableData";
+import {
+  studentPerformanceColumns,
+  studentPerformanceData,
+} from "@/utils/tableData";
 import React from "react";
 
-const AdminDashboard = () => {
+const Performance = () => {
   return (
     <div>
+      {" "}
       <div className="mb-6">
         <h1
           className={`${poppins.className} font-semibold text-sectionHeading`}
         >
-          Dashboard
+          Hi Sasuke
         </h1>
-        <p className={`${roboto.className} text-para`}>Hi, John</p>
+        <p className={`${roboto.className} text-para`}>
+          “Keep pushing your limits!”
+        </p>
       </div>
-      <AdminCards />
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10"> */}
       <div className="flex gap-x-8 mt-10">
         <LineChartProject data={performanceDataAdmin} />
-        <BarChartProject data={departmentDataAdmin} />
+        <BarChartProject
+          data={studentSubjectGradesBarData}
+          title="Grades by Subject"
+          xKey="subject"
+          yKey="grade"
+        />
       </div>
       <div className="mt-10">
         <DataTable
-          columns={stressTableColumns}
-          data={stressTableData}
+          columns={studentPerformanceColumns}
+          data={studentPerformanceData}
           title="Student Wellbeing Overview"
         />
       </div>
@@ -38,4 +48,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default Performance;
